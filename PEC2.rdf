@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/aizquierdode_pec2/"
-     xml:base="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/aizquierdode_pec2/"
+<rdf:RDF xmlns="https://w3id.org/def/aizquierdode_pec2"
+     xml:base="https://w3id.org/def/aizquierdode_pec2"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -12,9 +12,9 @@
      xmlns:dcmi-terms="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#"
      xmlns:aizquierdode_pec2="https://w3id.org/def/aizquierdode_pec2#">
     <owl:Ontology rdf:about="https://w3id.org/def/aizquierdode_pec2">
+        <owl:versionInfo>v0.0.1</owl:versionInfo>
         <aizquierdode_pec2:description>Ontology Wines Reviews including winery, wines, properties of wines, year of production.</aizquierdode_pec2:description>
         <aizquierdode_pec2:title>aizquierdode_pec2</aizquierdode_pec2:title>
-        <owl:versionInfo>v0.0.1</owl:versionInfo>
         <dcmi-terms:creator>Antonio Izquierdo Delgado</dcmi-terms:creator>
     </owl:Ontology>
     
@@ -72,27 +72,6 @@
     
 
 
-    <!-- https://w3id.org/def/aizquierdode_pec2#hasRegion -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/aizquierdode_pec2#hasRegion">
-        <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/WineRegion"/>
-        <rdfs:comment>A wine always belongs to a denomination of origin or region</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#isProducerOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/aizquierdode_pec2#isProducerOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Winery"/>
-        <rdfs:comment>A wine is produced by a winery</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/def/aizquierdode_pec2#hasAcidity -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/aizquierdode_pec2#hasAcidity">
@@ -129,6 +108,27 @@
     
 
 
+    <!-- https://w3id.org/def/aizquierdode_pec2#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/aizquierdode_pec2#hasRegion">
+        <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/WineRegion"/>
+        <rdfs:comment>A wine always belongs to a denomination of origin or region</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#isProducerOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/aizquierdode_pec2#isProducerOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Winery"/>
+        <rdfs:comment>A wine is produced by a winery</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -143,6 +143,7 @@
     <!-- http://dbpedia.org/ontology/abstract -->
 
     <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/abstract">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Standard field annotation</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -152,6 +153,7 @@
 
     <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/price">
         <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Price of wine for year production</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -161,6 +163,7 @@
 
     <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/rating">
         <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Valoration wine</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -170,27 +173,8 @@
 
     <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/year">
         <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
-        <rdfs:comment>Year production wine</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#hasNumReviews -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/aizquierdode_pec2#hasNumReviews">
-        <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Popular"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:comment>Quantity valorations of wine</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#name -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/aizquierdode_pec2#name">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Name of element</rdfs:comment>
+        <rdfs:comment>Year production wine</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -209,6 +193,16 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/aizquierdode_pec2#body">
         <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Body"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#hasNumReviews -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/aizquierdode_pec2#hasNumReviews">
+        <rdfs:domain rdf:resource="https://w3id.org/def/aizquierdode_pec2#Popular"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Quantity valorations of wine</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -248,11 +242,27 @@
     
 
 
+    <!-- https://w3id.org/def/aizquierdode_pec2#Acidity -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Acidity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Characteristics"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/aizquierdode_pec2#Albarino -->
 
     <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Albarino">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#WhiteWine"/>
         <rdfs:comment>It is a grape variety from Galicia,1 more specifically from the province of Pontevedra, where it is used to make white wine. His party, which brings together more than one hundred thousand people, is celebrated in Cambados, on the first Sunday of August.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#Body -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Body">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Characteristics"/>
     </owl:Class>
     
 
@@ -272,6 +282,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Sparkling"/>
         <rdfs:comment>type of sparkling wine</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#Characteristics -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Characteristics"/>
     
 
 
@@ -295,6 +311,87 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
     
 
 
+    <!-- https://w3id.org/def/aizquierdode_pec2#HighAcidity -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#HighAcidity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Acidity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#HighBody -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#HighBody">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#HighPopular -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#HighPopular">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Popular"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#LowAcidity -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#LowAcidity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Acidity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#LowBody -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#LowBody">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#LowPopular -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#LowPopular">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Popular"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#MediumAcidity -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#MediumAcidity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Acidity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#MediumBody -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#MediumBody">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#MediumPopular -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#MediumPopular">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Popular"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#Mencia -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Mencia">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#RedWine"/>
+        <rdfs:comment>It is the name of a variety or breed of red grape introduced and cultivated mainly in the northwest of the Iberian Peninsula since the time of Ancient Rome. After recovering from the disaster of the phylloxera epidemic at the end of the 19th century, which caused a serious economic crisis in its traditional areas of cultivation, it is used to make aromatic and fruity wines, of intense color, and with the possibility of aging. It was considered for a time to be an adapted clone of the Cabernet Franc grape.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/aizquierdode_pec2#Monastrell -->
 
     <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Monastrell">
@@ -304,11 +401,36 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
     
 
 
+    <!-- https://w3id.org/def/aizquierdode_pec2#Other -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Other">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
+        <rdfs:comment>Subclass for special wines</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/aizquierdode_pec2#PedroXimenez -->
 
     <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#PedroXimenez">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#WhiteWine"/>
         <rdfs:comment>It is a white grape variety that grows in various Spanish wine regions. It is the main grape of the Montilla-Moriles Denomination of Origin,1 in the province of Córdoba. In that DO it is used to produce a very sweet and very dark dessert wine. It is made by drying the grapes in the sun, which concentrates the sweetness. This creates a heavy, dark wine with flavors of raisins and molasses, which is fortified and aged in solera.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#Popular -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Popular">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/aizquierdode_pec2#Province -->
+
+    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Province">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Country"/>
     </owl:Class>
     
 
@@ -394,24 +516,6 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
     
 
 
-    <!-- https://w3id.org/def/aizquierdode_pec2#Mencia -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Mencia">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#RedWine"/>
-        <rdfs:comment>It is the name of a variety or breed of red grape introduced and cultivated mainly in the northwest of the Iberian Peninsula since the time of Ancient Rome. After recovering from the disaster of the phylloxera epidemic at the end of the 19th century, which caused a serious economic crisis in its traditional areas of cultivation, it is used to make aromatic and fruity wines, of intense color, and with the possibility of aging. It was considered for a time to be an adapted clone of the Cabernet Franc grape.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#Other -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Other">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
-        <rdfs:comment>Subclass for special wines</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/aizquierdode_pec2#Wine -->
 
     <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Wine">
@@ -429,124 +533,7 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/aizquierdode_pec2#name"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>Parent for all wines</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#Acidity -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Acidity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Characteristics"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#Body -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Body">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Characteristics"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#Characteristics -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Characteristics"/>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#HighAcidity -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#HighAcidity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Acidity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#HighBody -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#HighBody">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Body"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#HighPopular -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#HighPopular">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Popular"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#LowAcidity -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#LowAcidity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Acidity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#LowBody -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#LowBody">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Body"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#LowPopular -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#LowPopular">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Popular"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#MediumAcidity -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#MediumAcidity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Acidity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#MediumBody -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#MediumBody">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Body"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#MediumPopular -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#MediumPopular">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Popular"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#Popular -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Popular">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Characteristics"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/aizquierdode_pec2#Province -->
-
-    <owl:Class rdf:about="https://w3id.org/def/aizquierdode_pec2#Province">
-        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Country"/>
     </owl:Class>
     
 
@@ -602,9 +589,9 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
         <aizquierdode_pec2:isProducerOf rdf:resource="https://w3id.org/def/aizquierdode_pec2#Enrique_Mendoza"/>
         <ontology:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</ontology:rating>
         <ontology:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2017</ontology:year>
-        <aizquierdode_pec2:hasNumReviews rdf:datatype="http://www.w3.org/2001/XMLSchema#int">420</aizquierdode_pec2:hasNumReviews>
         <aizquierdode_pec2:acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</aizquierdode_pec2:acidity>
         <aizquierdode_pec2:body rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</aizquierdode_pec2:body>
+        <aizquierdode_pec2:hasNumReviews rdf:datatype="http://www.w3.org/2001/XMLSchema#int">420</aizquierdode_pec2:hasNumReviews>
     </owl:NamedIndividual>
     
 
@@ -623,15 +610,6 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/def/aizquierdode_pec2#RedWine"/>
-            <rdf:Description rdf:about="https://w3id.org/def/aizquierdode_pec2#RoseWine"/>
-            <rdf:Description rdf:about="https://w3id.org/def/aizquierdode_pec2#WhiteWine"/>
-            <rdf:Description rdf:about="https://w3id.org/def/aizquierdode_pec2#Other"/>
-        </owl:members>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -656,6 +634,15 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
             <rdf:Description rdf:about="https://w3id.org/def/aizquierdode_pec2#MediumPopular"/>
         </owl:members>
     </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/def/aizquierdode_pec2#Other"/>
+            <rdf:Description rdf:about="https://w3id.org/def/aizquierdode_pec2#RedWine"/>
+            <rdf:Description rdf:about="https://w3id.org/def/aizquierdode_pec2#RoseWine"/>
+            <rdf:Description rdf:about="https://w3id.org/def/aizquierdode_pec2#WhiteWine"/>
+        </owl:members>
+    </rdf:Description>
     
 
 
@@ -667,59 +654,17 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="urn:swrl:var#w">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl:var#i">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#t">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#s">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/def/aizquierdode_pec2#isProducerOf"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://dbpedia.org/ontology/Winery"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
+    <rdf:Description rdf:about="urn:swrl:var#w">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
@@ -1111,6 +1056,48 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="https://w3id.org/def/aizquierdode_pec2#LowBody"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/def/aizquierdode_pec2#isProducerOf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://w3id.org/def/aizquierdode_pec2#Wine"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://dbpedia.org/ontology/Winery"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
