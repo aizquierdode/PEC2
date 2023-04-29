@@ -1,0 +1,130 @@
+{
+  "@context" : {
+    "ToroRed" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#ToroRed"
+    },
+    "CabernetSauvignon" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#CabernetSauvignon"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Winery" : {
+      "@id" : "http://dbpedia.org/ontology/Winery"
+    },
+    "Country" : {
+      "@id" : "http://dbpedia.org/ontology/Country"
+    },
+    "isProducerOf" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#isProducerOf",
+      "@type" : "@id"
+    },
+    "Mencia" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Mencia"
+    },
+    "Syrah" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Syrah"
+    },
+    "hasNumReviews" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasNumReviews",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "PedroXimenez" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#PedroXimenez"
+    },
+    "RiojaRed" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RiojaRed"
+    },
+    "hasAcidity" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasAcidity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "MontsantRed" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#MontsantRed"
+    },
+    "WineRegion" : {
+      "@id" : "http://dbpedia.org/ontology/WineRegion"
+    },
+    "name" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Monastrell" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Monastrell"
+    },
+    "Sherry" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Sherry"
+    },
+    "Grenache" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Grenache"
+    },
+    "hasBody" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasBody",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "RiojaWhite" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RiojaWhite"
+    },
+    "SauvignonBlanc" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#SauvignonBlanc"
+    },
+    "WhiteWine" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine"
+    },
+    "title" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#title"
+    },
+    "Tempranillo" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Tempranillo"
+    },
+    "year" : {
+      "@id" : "http://dbpedia.org/ontology/year"
+    },
+    "PrioratRed" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#PrioratRed"
+    },
+    "RoseWine" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RoseWine"
+    },
+    "Verdejo" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Verdejo"
+    },
+    "RiberaDelDueroRed" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RiberaDelDueroRed"
+    },
+    "price" : {
+      "@id" : "http://dbpedia.org/ontology/price"
+    },
+    "rating" : {
+      "@id" : "http://dbpedia.org/ontology/rating"
+    },
+    "hasRegion" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasRegion",
+      "@type" : "@id"
+    },
+    "Other" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Other"
+    },
+    "Sparkling" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Sparkling"
+    },
+    "Cava" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Cava"
+    },
+    "Chardonnay" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Chardonnay"
+    },
+    "description" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#description"
+    },
+    "Albarino" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Albarino"
+    },
+    "RedWine" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"
+    },
+    "Wine" : {
+      "@id" : "http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"
+    }
+  }
+}

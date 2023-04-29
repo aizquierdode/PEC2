@@ -1,0 +1,31 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "wineontology:RoseWine" "wineontology:Wine" "wineontology:PrioratRed" "wineontology:Mencia" "wineontology:Cava" "wineontology:Syrah" "wineontology:WhiteWine" "wineontology:SauvignonBlanc" "wineontology:CabernetSauvignon" "http://dbpedia.org/ontology/Country" "wineontology:RiojaWhite" "wineontology:PedroXimenez" "wineontology:Tempranillo" "wineontology:RiojaRed" "wineontology:RiberaDelDueroRed" "wineontology:RedWine" "wineontology:Grenache" "wineontology:MontsantRed" "wineontology:Monastrell" "wineontology:Chardonnay" "wineontology:Sparkling" "wineontology:ToroRed" "wineontology:Albarino" "http://dbpedia.org/ontology/WineRegion" "wineontology:Sherry" "wineontology:Verdejo" "wineontology:Other" ; /*classes style*/
+	"wineontology:Mencia" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:RoseWine" -> "wineontology:Wine" [ label = "rdfs:subClassOf" ];
+	"wineontology:Sparkling" -> "wineontology:Other" [ label = "rdfs:subClassOf" ];
+	"wineontology:Tempranillo" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:RedWine" -> "wineontology:Wine" [ label = "rdfs:subClassOf" ];
+	"wineontology:Other" -> "wineontology:Wine" [ label = "rdfs:subClassOf" ];
+	"http://dbpedia.org/ontology/WineRegion" -> "http://dbpedia.org/ontology/Country" [ label = "rdfs:subClassOf" ];
+	"wineontology:PrioratRed" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:Grenache" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:SauvignonBlanc" -> "wineontology:WhiteWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:Verdejo" -> "wineontology:WhiteWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:ToroRed" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:Monastrell" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:RiojaWhite" -> "wineontology:WhiteWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:PedroXimenez" -> "wineontology:WhiteWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:CabernetSauvignon" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:RiojaRed" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:RiberaDelDueroRed" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:Chardonnay" -> "wineontology:WhiteWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:MontsantRed" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:Syrah" -> "wineontology:RedWine" [ label = "rdfs:subClassOf" ];
+	"wineontology:WhiteWine" -> "wineontology:Wine" [ label = "rdfs:subClassOf" ];
+	"wineontology:Sherry" -> "wineontology:Other" [ label = "rdfs:subClassOf" ];
+	"wineontology:Cava" -> "wineontology:Other" [ label = "rdfs:subClassOf" ];
+	"wineontology:Albarino" -> "wineontology:WhiteWine" [ label = "rdfs:subClassOf" ];
+
+}
