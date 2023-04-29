@@ -85,24 +85,28 @@
 
 ###  http://dbpedia.org/ontology/abstract
 <http://dbpedia.org/ontology/abstract> rdf:type owl:DatatypeProperty ;
+                                       rdfs:range xsd:string ;
                                        rdfs:comment "Standard field annotation" .
 
 
 ###  http://dbpedia.org/ontology/price
 <http://dbpedia.org/ontology/price> rdf:type owl:DatatypeProperty ;
                                     rdfs:domain :Wine ;
+                                    rdfs:range xsd:float ;
                                     rdfs:comment "Price of wine for year production" .
 
 
 ###  http://dbpedia.org/ontology/rating
 <http://dbpedia.org/ontology/rating> rdf:type owl:DatatypeProperty ;
                                      rdfs:domain :Wine ;
+                                     rdfs:range xsd:float ;
                                      rdfs:comment "Valoration wine" .
 
 
 ###  http://dbpedia.org/ontology/year
 <http://dbpedia.org/ontology/year> rdf:type owl:DatatypeProperty ;
                                    rdfs:domain :Wine ;
+                                   rdfs:range xsd:int ;
                                    rdfs:comment "Year production wine" .
 
 
@@ -123,13 +127,6 @@
                rdfs:domain :Popular ;
                rdfs:range xsd:int ;
                rdfs:comment "Quantity valorations of wine" .
-
-
-###  https://w3id.org/def/aizquierdode_pec2#name
-:name rdf:type owl:DatatypeProperty ,
-               owl:FunctionalProperty ;
-      rdfs:range xsd:string ;
-      rdfs:comment "Name of element" .
 
 
 #################################################################
@@ -341,11 +338,6 @@ Grenache ripens late, so it needs dry and warm conditions like those found in Sp
                         owl:onProperty <http://dbpedia.org/ontology/year> ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onDataRange xsd:int
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :name ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string
                       ] ;
       rdfs:comment "Parent for all wines" .
 
