@@ -1,7 +1,8 @@
 {
   "@context" : {
     "abstract" : {
-      "@id" : "http://dbpedia.org/ontology/abstract"
+      "@id" : "http://dbpedia.org/ontology/abstract",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "CabernetSauvignon" : {
       "@id" : "https://w3id.org/def/aizquierdode_pec2#CabernetSauvignon"
@@ -67,10 +68,6 @@
     "creator" : {
       "@id" : "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#creator"
     },
-    "name" : {
-      "@id" : "https://w3id.org/def/aizquierdode_pec2#name",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "Characteristics" : {
       "@id" : "https://w3id.org/def/aizquierdode_pec2#Characteristics"
     },
@@ -114,7 +111,8 @@
       "@id" : "https://w3id.org/def/aizquierdode_pec2#Tempranillo"
     },
     "year" : {
-      "@id" : "http://dbpedia.org/ontology/year"
+      "@id" : "http://dbpedia.org/ontology/year",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
     "LowAcidity" : {
       "@id" : "https://w3id.org/def/aizquierdode_pec2#LowAcidity"
@@ -139,10 +137,12 @@
       "@type" : "@id"
     },
     "price" : {
-      "@id" : "http://dbpedia.org/ontology/price"
+      "@id" : "http://dbpedia.org/ontology/price",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "rating" : {
-      "@id" : "http://dbpedia.org/ontology/rating"
+      "@id" : "http://dbpedia.org/ontology/rating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "hasRegion" : {
       "@id" : "https://w3id.org/def/aizquierdode_pec2#hasRegion",
